@@ -78,3 +78,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ## Table of Contents:
 
 - Code Challenge 01: [Reverse List](/docs/reverse_list/README.md)
+- Code Challenge 02: [List Insert Shift](/docs/list_insert_shift/README.md)
