@@ -73,3 +73,28 @@ def test_includes_false():
     linked_list.insert("banana")
 
     assert not linked_list.includes("cucumber")
+
+
+# TESTS CODE CHALLENGE 6
+def test_string_numbers():
+    linked_list = LinkedList()
+    linked_list.insert('Cherry')
+    linked_list.insert("Potato")
+    linked_list.insert(1)
+    linked_list.insert(2)
+
+    assert str(linked_list) == "{ 2 } -> { 1 } -> { Potato } -> { Cherry } -> NULL"
+
+
+def test_array():
+    linked_list = LinkedList()
+    linked_list.insert([])
+    assert linked_list.head.value == []
+
+
+def tesst_boolean():
+    linked_list = LinkedList()
+    linked_list.insert("Cherry")
+    linked_list.insert("Tomato")
+
+    assert not linked_list.includes(False)
