@@ -44,5 +44,58 @@ class LinkedList:
 
         return False
 
-class TargetError:
+    def append(self, new_value):
+        current = self.head
+        new_node = Node(new_value)
+
+        if current is None:
+            self.head = new_node
+            return
+
+        while current.next:
+            current = current.next
+
+        current.next = new_node
+
+    def insert_before(self, target_value, new_value):
+        current = self.head
+        new_node = Node(new_value)
+
+        if current is None:
+            self.head = new_node
+            return
+
+        if current.value == target_value:
+            self.insert(new_value)
+            return
+
+        while current.next:
+            if current.next.value == target_value:
+                new_node.next = new_node
+                return
+            current = current
+
+
+
+
+    def insert_after(self, target_value, new_value):
+        current = self.head
+        new_node = Node(new_value)
+
+        if current is None:
+            self.head = new_node
+            return
+
+        while current:
+            if current.value == target_value:
+                new_node.next = current.next
+                current.next = new_node
+                return
+            current = current.next
+
+
+
+
+
+class TargetError(Exception):
     pass
