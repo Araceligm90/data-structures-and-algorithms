@@ -114,7 +114,7 @@ class LinkedList:
         current = self.head
         for _ in range(count - k - 1):
             current = current.next
-        
+
         return current.value
 
 
