@@ -94,7 +94,28 @@ class LinkedList:
             current = current.next
 
 
+    def kth_from_end(self, k):
+        if k < 0:
+            raise ValueError('K cannot be a negative number')
 
+        current = self.head
+        count = 0
+
+        while current:
+            count += 1
+            current = current.next
+
+        if count == 0:
+            raise ValueError('This list is empty')
+
+        if k >= count:
+            raise ValueError('K is greater than or equal to the number of nodes')
+
+        current = self.head
+        for _ in range(count - k - 1):
+            current = current.next
+        
+        return current.value
 
 
 class TargetError(Exception):
