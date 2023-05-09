@@ -3,14 +3,24 @@ class BinaryTree:
     Put docstring here
     """
 
-    def __init__(self):
-        # initialization here
-        pass
+    def __init__(self, root=None):
+        self.root = root
 
-    def some_method(self):
-        # method body here
-        pass
+    def pre_order(self):
+        tree: []
+        current = self.root
+
+    def post_order(self):
+        tree: []
+        current = self.root
+
+    def in_order(self):
+        tree: []
+        current = self.root
 
 
 class Node:
-    pass
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
