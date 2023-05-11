@@ -75,9 +75,6 @@ class LinkedList:
                 return
             current = current
 
-
-
-
     def insert_after(self, target_value, new_value):
         current = self.head
         new_node = Node(new_value)
@@ -92,7 +89,6 @@ class LinkedList:
                 current.next = new_node
                 return
             current = current.next
-
 
     def kth_from_end(self, k):
         if k < 0:
