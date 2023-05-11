@@ -1,10 +1,5 @@
 from data_structures.invalid_operation_error import InvalidOperationError
-
-
-class Node:
-    def __int__(self, value, next=None):
-        self.value = value
-        self.next = next
+from data_structures.linked_list import Node
 
 
 class Queue:
@@ -34,7 +29,6 @@ class Queue:
         self.front = self.front.next
 
         return value
-
 
     def peek(self):
         if self.front is None:
