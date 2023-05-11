@@ -30,7 +30,6 @@ class Queue:
 
         return value
 
-
     def peek(self):
         if self.front is None:
             raise InvalidOperationError('Method not allowed on empty collection')
